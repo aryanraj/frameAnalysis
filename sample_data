@@ -1,6 +1,9 @@
-node 1 0 0 0 1 1
-node 2 0 10 0 1 0
-node 3 10 10 1 1 0
-member 1 fixed 2 pinned 200000 200000000000
-member 2 fixed 3 pinned 200000 200000000000
-member 1 fixed 3 pinned 200000 200000000000
+
+//		name	X		Y		fx 		fy 		fr
+node 	1 		0 		0 		u	 	u 		0
+node 	2 		0 		144		5 		0 		0
+node 	3 		144 	144 	0 		u 		0
+
+//		node1	type	node2 	type	EI			EA
+member 	1 		fixed 	2 		pinned 	2030000 	87000
+member 	2 		fixed 	3 		pinned 	2030000 	87000

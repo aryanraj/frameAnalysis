@@ -124,9 +124,9 @@ class member:
       [0,0,0],
       [0,0,0]
     ]
-    mat1 = concat((concat((self.Tm,zeros),axis=1),concat((zeros,self.Tm),axis=1)),axis=0)
-    mat2 = concat((concat((self.TmT,zeros),axis=1),concat((zeros,self.TmT),axis=1)),axis=0)
-    self.K = np.dot(np.dot(mat1,self.Km),mat2)
+    self.L2G = concat((concat((self.Tm,zeros),axis=1),concat((zeros,self.Tm),axis=1)),axis=0)
+    self.G2L = concat((concat((self.TmT,zeros),axis=1),concat((zeros,self.TmT),axis=1)),axis=0)
+    self.K = np.dot(np.dot(self.L2G,self.Km),self.G2L)
     # print('\n'.join([''.join(['{:20}'.format(item) for item in row]) for row in self.K]))
 
   def build_Final_K(self):
